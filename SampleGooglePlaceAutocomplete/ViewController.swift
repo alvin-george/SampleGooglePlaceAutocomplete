@@ -32,15 +32,19 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
     
     @IBAction func launchGooglePicker(_ sender: Any) {
         
-
         present(gmsController, animated: true, completion: nil)
         
     }
     func customizeGooglePlaceSearch()
     {
-        gmsController.tintColor =  UIColor.darkGray
+        //CHANGING FOR BETTER UNDERSTANDING
+        gmsController.tintColor =  UIColor.cyan
         gmsController.tableCellBackgroundColor =  UIColor.white
-        gmsController.secondaryTextColor =  UIColor.darkGray
+
+        gmsController.primaryTextColor =  UIColor.blue
+        gmsController.secondaryTextColor =  UIColor.red
+        gmsController.tableCellSeparatorColor =  UIColor.green
+    
         
     }
     
