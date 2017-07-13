@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WZn-ly-T4c">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -60,6 +60,141 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="JML-Go-3lU">
+            <objects>
+                <viewController storyboardIdentifier="secondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oLP-Bf-lYl" customClass="SecondViewController" customModule="SampleGooglePlaceAutocomplete" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0zH-Tj-gRH"/>
+                        <viewControllerLayoutGuide type="bottom" id="gbG-zp-q4C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oZe-oL-Msl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pOe-ty-FFB">
+                                <rect key="frame" x="20" y="70" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.32968933639999998" green="0.57117528650000005" blue="1" alpha="0.44801476880000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uIz-fA-cCg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oLP-Bf-lYl" id="Alm-1k-Dgu"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose State/Province" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZ0-Hv-NZ4">
+                                <rect key="frame" x="20" y="150" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.32968933639999998" green="0.57117528650000005" blue="1" alpha="0.44801476880000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="euZ-ci-LLg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oLP-Bf-lYl" id="pQF-rH-szR"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mb1-L7-iay">
+                                <rect key="frame" x="20" y="230" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.32968933639999998" green="0.57117528650000005" blue="1" alpha="0.44801476880000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YJy-En-rKw"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oLP-Bf-lYl" id="yZq-Nf-Afn"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mb1-L7-iay" secondAttribute="trailing" constant="20" id="CUN-9p-PSe"/>
+                            <constraint firstItem="mb1-L7-iay" firstAttribute="top" secondItem="gZ0-Hv-NZ4" secondAttribute="bottom" constant="40" id="GwV-8Y-naI"/>
+                            <constraint firstAttribute="trailing" secondItem="gZ0-Hv-NZ4" secondAttribute="trailing" constant="20" id="J7y-vv-qlh"/>
+                            <constraint firstItem="pOe-ty-FFB" firstAttribute="top" secondItem="0zH-Tj-gRH" secondAttribute="bottom" constant="50" id="KlF-V6-43l"/>
+                            <constraint firstItem="gZ0-Hv-NZ4" firstAttribute="leading" secondItem="oZe-oL-Msl" secondAttribute="leading" constant="20" id="NGl-fj-Q7h"/>
+                            <constraint firstItem="mb1-L7-iay" firstAttribute="leading" secondItem="oZe-oL-Msl" secondAttribute="leading" constant="20" id="UXX-oX-Ss5"/>
+                            <constraint firstItem="pOe-ty-FFB" firstAttribute="leading" secondItem="oZe-oL-Msl" secondAttribute="leading" constant="20" id="eVR-EV-RAt"/>
+                            <constraint firstAttribute="trailing" secondItem="pOe-ty-FFB" secondAttribute="trailing" constant="20" id="hYS-ba-5jB"/>
+                            <constraint firstItem="gZ0-Hv-NZ4" firstAttribute="top" secondItem="pOe-ty-FFB" secondAttribute="bottom" constant="40" id="m7V-66-OAx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextfield" destination="mb1-L7-iay" id="pTI-JH-fO0"/>
+                        <outlet property="countryTextfield" destination="pOe-ty-FFB" id="mDI-0i-zVq"/>
+                        <outlet property="stateTextfield" destination="gZ0-Hv-NZ4" id="sDE-SU-EPg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KI5-kM-R8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.79999999999995" y="28.335832083958024"/>
+        </scene>
+        <!--Country List Controller-->
+        <scene sceneID="M98-aH-XZ9">
+            <objects>
+                <viewController storyboardIdentifier="countryListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WZn-ly-T4c" customClass="CountryListController" customModule="SampleGooglePlaceAutocomplete" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Snn-ud-MlL"/>
+                        <viewControllerLayoutGuide type="bottom" id="UXa-AM-TXt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wjf-t2-wKD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oXe-KA-ly8">
+                                <rect key="frame" x="28.5" y="83.5" width="319" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="kvy-WY-qcR">
+                                        <rect key="frame" x="0.0" y="28" width="319" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kvy-WY-qcR" id="KoW-JY-Mmm">
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WZn-ly-T4c" id="kwp-9g-bFq"/>
+                                    <outlet property="delegate" destination="WZn-ly-T4c" id="qeU-ao-OQh"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search country" translatesAutoresizingMaskIntoConstraints="NO" id="h9b-3V-jcE">
+                                <rect key="frame" x="28.5" y="39.5" width="319" height="44"/>
+                                <color key="backgroundColor" red="0.31476861239999998" green="0.41043370959999997" blue="0.75971758369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dkO-G5-f8y"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.31476861239999998" green="0.41043370959999997" blue="0.75971758369999998" alpha="0.30380458049999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oXe-KA-ly8" firstAttribute="width" secondItem="wjf-t2-wKD" secondAttribute="width" multiplier="0.85" id="C5q-Dv-UmV"/>
+                            <constraint firstItem="h9b-3V-jcE" firstAttribute="leading" secondItem="oXe-KA-ly8" secondAttribute="leading" id="j3o-89-szs"/>
+                            <constraint firstItem="oXe-KA-ly8" firstAttribute="top" secondItem="h9b-3V-jcE" secondAttribute="bottom" id="n07-PU-Vlb"/>
+                            <constraint firstItem="oXe-KA-ly8" firstAttribute="height" secondItem="wjf-t2-wKD" secondAttribute="height" multiplier="0.75" id="qFs-rq-nXv"/>
+                            <constraint firstItem="h9b-3V-jcE" firstAttribute="trailing" secondItem="oXe-KA-ly8" secondAttribute="trailing" id="soj-sN-TaU"/>
+                            <constraint firstItem="oXe-KA-ly8" firstAttribute="centerY" secondItem="wjf-t2-wKD" secondAttribute="centerY" id="wbe-H1-NvB"/>
+                            <constraint firstItem="oXe-KA-ly8" firstAttribute="centerX" secondItem="wjf-t2-wKD" secondAttribute="centerX" id="xwM-LX-TKe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryListTable" destination="oXe-KA-ly8" id="nJh-au-oRV"/>
+                        <outlet property="countrySearchbar" destination="h9b-3V-jcE" id="s8p-WM-clt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vy5-mg-gEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="22"/>
         </scene>
     </scenes>
 </document>

@@ -52,11 +52,6 @@ class ViewController: UIViewController, GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         
         
-        print("Place name: \(place.name)")
-        print("Place address: \(place.formattedAddress)")
-        print("Place attributions: \(place.attributions)")
-        
-        
         placeDetailTextView.text = "Place name: \(place.name) \nPlace address: \(place.formattedAddress) \nPlace attributions: \(place.attributions)"
         
         
